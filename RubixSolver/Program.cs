@@ -13,3 +13,4 @@ var cube = new RubixCube();
 cube.InitializeCube();
 
 // Print the cube!
+cube.PrintCube();

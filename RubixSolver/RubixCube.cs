@@ -103,5 +103,38 @@ namespace RubixSolver
                 face2[i, 0] = temp[i];
             }
         }
+        
+        // Utility
+        
+        /// <summary>
+        /// Print the current states / the cube
+        /// </summary>
+        public void PrintCube()
+        {
+            Console.WriteLine("Front Face:");
+            PrintFace(frontFace);
+            Console.WriteLine("Right Face:");
+            PrintFace(rightFace);
+            Console.WriteLine("Up Face:");
+            PrintFace(upFace);
+            Console.WriteLine("Back Face:");
+            PrintFace(backFace);
+            Console.WriteLine("Left Face:");
+            PrintFace(leftFace);
+            Console.WriteLine("Down Face:");
+            PrintFace(downFace);
+        }
+        
+        private void PrintFace(char[,] face)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(face[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
