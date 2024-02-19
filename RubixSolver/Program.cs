@@ -33,3 +33,10 @@ cube.RotateBackAntiClockwise();
 cube.PrintCube();
 
 Console.WriteLine("Step 5/6");
+cube.RotateLeftClockwise();
+cube.PrintCube();
+
+Console.WriteLine("=================================");
+Console.WriteLine("Step 6/6");
+cube.RotateDownAntiClockwise();
+cube.PrintCube();

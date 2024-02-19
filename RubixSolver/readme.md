@@ -21,3 +21,5 @@ I have come across several papers on Rubix cube design, such as: https://dl.acm.
 However, these primarily seem to deal with solving them, not creating one to be used by a human. (Of course I am sure that if I was able to read further I would eat my words, but the recruiter said that I should only spend an hour!)
 
 The rotate method is fairly simple but I'm understanding it better. This is a fantastic way to study how changing data effects things around it in code.
+
+Nevermind, this does not seem to be working at all haha. I have run out of time, so I will write a couple of unit tests that will ensure when I come back to this tomorrow I will get it right!

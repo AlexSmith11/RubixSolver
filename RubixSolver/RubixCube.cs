@@ -164,6 +164,7 @@ namespace RubixSolver
         // public rotation methods to help with simplicity, abstraction and SOLID
         // These also help with our update process - when we do something to the 3d object, what do we need to do to each face relative to the face being turned?
         // This just helps me visualise it better
+        // Keeping track of the faces here was a drag
         public void RotateFrontClockwise()
         {
             RotateClockwise(frontFace);
@@ -210,6 +211,30 @@ namespace RubixSolver
         {
             RotateAntiClockwise(backFace);
             RotateAdjacentAntiClockwise(upFace, leftFace, downFace, rightFace);
+        }
+        
+        public void RotateLeftClockwise()
+        {
+            RotateClockwise(leftFace);
+            RotateAdjacentClockwise(upFace, backFace, downFace, frontFace);
+        }
+
+        public void RotateLeftAntiClockwise()
+        {
+            RotateAntiClockwise(leftFace);
+            RotateAdjacentAntiClockwise(upFace, backFace, downFace, frontFace);
+        }
+        
+        public void RotateDownClockwise()
+        {
+            RotateClockwise(downFace);
+            RotateAdjacentClockwise(frontFace, leftFace, backFace, rightFace);
+        }
+
+        public void RotateDownAntiClockwise()
+        {
+            RotateAntiClockwise(downFace);
+            RotateAdjacentAntiClockwise(frontFace, leftFace, backFace, rightFace);
         }
     }
 }
