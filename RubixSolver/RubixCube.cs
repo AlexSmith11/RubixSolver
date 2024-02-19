@@ -39,7 +39,7 @@ namespace RubixSolver
             return face;
         }
         
-        // Rotate: clockwise/anti, then account for the adjacent faces.
+        // Rotations: clockwise/anti, then account for the adjacent faces.
         
         /// <summary>
         /// Rotate a face clockwise.
@@ -101,6 +101,30 @@ namespace RubixSolver
                 face4[2 - i, 2] = face3[0, i];
                 face3[0, i] = face2[i, 0];
                 face2[i, 0] = temp[i];
+            }
+        }
+        
+        /// <summary>
+        /// Update adjacent faces after a face has been rotated anti-clockwise
+        /// </summary>
+        /// <param name="face1"></param>
+        /// <param name="face2"></param>
+        /// <param name="face3"></param>
+        /// <param name="face4"></param>
+        private void RotateAdjacentAntiClockwise(char[,] face1, char[,] face2, char[,] face3, char[,] face4)
+        {
+            char[] temp = new char[3];
+            for (int i = 0; i < 3; i++)
+            {
+                temp[i] = face1[2, i];
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                face1[2, i] = face2[i, 0];
+                face2[i, 0] = face3[0, i];
+                face3[0, i] = face4[2 - i, 2];
+                face4[2 - i, 2] = temp[i];
             }
         }
         

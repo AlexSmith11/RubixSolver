@@ -13,4 +13,7 @@ var cube = new RubixCube();
 cube.InitializeCube();
 
 // Print the cube!
+Console.WriteLine("Cube start state: ");
 cube.PrintCube();
+Console.WriteLine("=================================");
+

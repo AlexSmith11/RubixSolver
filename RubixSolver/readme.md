@@ -14,7 +14,7 @@ The below reads more of a play-by-play of my thoughts going through this.
 
 I wanted to use a very easy to understand method for this solution. I am not at all familiar with efficient Rubix cube design, nor how one would design a cube with a solver in mind.
 
-Due to this, I have opted to use the simplest design I can think of ~~using OOP~~ I have gone even simpler - we don't even need a cube object, we can just have each side as a 3x3 array. For flavor we can add each side to a "Cube" object later if needed.
+Due to this, I have opted to use the simplest design I can think of. We can just have each side as a 3x3 array.
 
 I have come across several papers on Rubix cube design, such as: https://dl.acm.org/doi/10.1145/800058.801107
 
