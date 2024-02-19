@@ -11,3 +11,5 @@ Console.WriteLine("Hi");
 
 var cube = new RubixCube();
 cube.InitializeCube();
+
+// Print the cube!

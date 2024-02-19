@@ -38,5 +38,46 @@ namespace RubixSolver
 
             return face;
         }
+        
+        // Rotate: clockwise/anti, then account for the adjacent faces.
+        
+        /// <summary>
+        /// Rotate a face clockwise.
+        /// </summary>
+        /// <param name="face"></param>
+        private void RotateClockwise(char[,] face)
+        {
+            char[,] rotatedFace = new char[3, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    rotatedFace[j, 2 - i] = face[i, j];
+                }
+            }
+
+            Array.Copy(rotatedFace, face, rotatedFace.Length);
+        }
+        
+        /// <summary>
+        /// Rotate anti-clockwise.
+        /// Using the above logic, we can also now rotate in the opposite direction.
+        /// </summary>
+        /// <param name="face"></param>
+        private void RotateAntiClockwise(char[,] face)
+        {
+            char[,] rotatedFace = new char[3, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    rotatedFace[2 - j, i] = face[i, j];
+                }
+            }
+
+            Array.Copy(rotatedFace, face, rotatedFace.Length);
+        }
     }
 }
