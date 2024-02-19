@@ -79,5 +79,29 @@ namespace RubixSolver
 
             Array.Copy(rotatedFace, face, rotatedFace.Length);
         }
+        
+        /// <summary>
+        /// Update adjacent faces after a face has been rotated.
+        /// </summary>
+        /// <param name="face1"></param>
+        /// <param name="face2"></param>
+        /// <param name="face3"></param>
+        /// <param name="face4"></param>
+        private void RotateAdjacentClockwise(char[,] face1, char[,] face2, char[,] face3, char[,] face4)
+        {
+            char[] temp = new char[3];
+            for (int i = 0; i < 3; i++)
+            {
+                temp[i] = face1[2, i];
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                face1[2, i] = face4[2 - i, 2];
+                face4[2 - i, 2] = face3[0, i];
+                face3[0, i] = face2[i, 0];
+                face2[i, 0] = temp[i];
+            }
+        }
     }
 }
