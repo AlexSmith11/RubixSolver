@@ -5,12 +5,12 @@ namespace RubixSolver
     public class RubixCube
     {
         // we will use simple 2d char arrays for each face
-        private char[,] frontFace;
-        private char[,] rightFace;
-        private char[,] upFace;
-        private char[,] backFace;
-        private char[,] leftFace;
-        private char[,] downFace;
+        public char[,] frontFace;
+        public char[,] rightFace;
+        public char[,] upFace;
+        public char[,] backFace;
+        public char[,] leftFace;
+        public char[,] downFace;
 
         // constructor to create each side of the cube.
         public void InitializeCube()
