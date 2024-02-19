@@ -170,7 +170,7 @@ namespace RubixSolver
             RotateAdjacentClockwise(upFace, rightFace, downFace, leftFace);
         }
         
-        public void RotateFrontCounterClockwise()
+        public void RotateFrontAntiClockwise()
         {
             RotateAntiClockwise(frontFace);
             RotateAdjacentAntiClockwise(upFace, rightFace, downFace, leftFace);
@@ -182,7 +182,7 @@ namespace RubixSolver
             RotateAdjacentClockwise(frontFace, downFace, backFace, upFace);
         }
 
-        public void RotateRightCounterClockwise()
+        public void RotateRightAntiClockwise()
         {
             RotateAntiClockwise(rightFace);
             RotateAdjacentAntiClockwise(frontFace, downFace, backFace, upFace);
@@ -194,10 +194,22 @@ namespace RubixSolver
             RotateAdjacentClockwise(frontFace, leftFace, backFace, rightFace);
         }
 
-        public void RotateUpCounterClockwise()
+        public void RotateUpAntiClockwise()
         {
             RotateAntiClockwise(upFace);
             RotateAdjacentAntiClockwise(frontFace, leftFace, backFace, rightFace);
+        }
+        
+        public void RotateBackClockwise()
+        {
+            RotateClockwise(backFace);
+            RotateAdjacentClockwise(upFace, leftFace, downFace, rightFace);
+        }
+
+        public void RotateBackAntiClockwise()
+        {
+            RotateAntiClockwise(backFace);
+            RotateAdjacentAntiClockwise(upFace, leftFace, downFace, rightFace);
         }
     }
 }

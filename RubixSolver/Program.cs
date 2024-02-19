@@ -27,3 +27,9 @@ cube.PrintCube();
 Console.WriteLine("Step 3/6");
 cube.RotateUpClockwise();
 cube.PrintCube();
+
+Console.WriteLine("Step 4/6");
+cube.RotateBackAntiClockwise();
+cube.PrintCube();
+
+Console.WriteLine("Step 5/6");
