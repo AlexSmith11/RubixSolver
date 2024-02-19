@@ -12,12 +12,18 @@ Console.WriteLine("Hi");
 var cube = new RubixCube();
 cube.InitializeCube();
 
-// Print the cube!
+// Print the cube! Instructions per PDF are:
 Console.WriteLine("Cube start state: ");
 cube.PrintCube();
 Console.WriteLine("=================================");
-
+Console.WriteLine("Step 1/6");
 cube.RotateFrontClockwise();
 cube.PrintCube();
 
-cube.
+Console.WriteLine("Step 2/6");
+cube.RotateRightClockwise();
+cube.PrintCube();
+
+Console.WriteLine("Step 3/6");
+cube.RotateUpClockwise();
+cube.PrintCube();
