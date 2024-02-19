@@ -160,5 +160,12 @@ namespace RubixSolver
                 Console.WriteLine();
             }
         }
+        
+        // public rotation methods to help with simplicity, abstraction and SOLID
+        public void RotateFrontClockwise()
+        {
+            RotateClockwise(frontFace);
+            RotateAdjacentClockwise(upFace, rightFace, downFace, leftFace);
+        }
     }
 }

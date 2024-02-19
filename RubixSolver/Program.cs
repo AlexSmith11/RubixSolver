@@ -17,3 +17,7 @@ Console.WriteLine("Cube start state: ");
 cube.PrintCube();
 Console.WriteLine("=================================");
 
+cube.RotateFrontClockwise();
+cube.PrintCube();
+
+cube.
